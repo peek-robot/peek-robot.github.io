@@ -101,16 +101,6 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="./paper.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
               <!-- ArXiv -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2502.05485" class="external-link button is-normal is-rounded is-dark">
@@ -123,22 +113,12 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
               <!-- Demo Link. -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/liyi14/HAMSTER_beta"
+                <a href="https://github.com/peek-robot/peek"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
-                  </a>
-              </span>
-              <!-- Data Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-		      <i class="fa-solid fa-database"></i>
-                  </span>
-                  <span>Data (Coming Soon)</span>
                   </a>
               </span>
             </div>
@@ -234,13 +214,26 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <h2 class="title is-2">Experiments and Results</h2>
     </div>
     <div class="content has-text-centered">
-      <img src="static/images/peek_results.jpg">
+      <img src="static/images/peek franka envs.jpg">
+      <img src="static/images/peek bridge envs.jpg">
       <br>
       <b>
-        PEEK improves performance of 2D (ACT, $\pi_0$) and 3D imitation learning (3DDA) policies in generalization to new task variations.
-      We separate results into a variety of sections demonstrating various capabilities of HAMSTER below:
+        Our Environments and initial PEEK VLM predictions.
       </b>
     </div>
+    We perform <b>535 real-world evaluations</b> across 17 task variations and implement PEEK on top of 3 policy architectures.
+    <p>(1): <b>Franka Sim-to-Real:</b> We train only in simulation and evaluate zero-shot in real with a 3D policy (3DDA). <br>
+      (2): <b>WidowX Bridge:</b> We train on the BRIDGE dataset and evaluate zero-shot on our custom WidowX setup.
+    </p>
+    <br>
+    <div class="content has-text-centered">
+      <img src="static/images/peek_results.jpg">
+      <br>
+    </div>
+        PEEK improves performance of 2D (ACT, $\pi_0$) and 3D imitation learning (3DDA) policies in generalization to new task variations.
+      We separate results into a variety of sections demonstrating various capabilities of PEEK below:
+      <br>
+      <br>
     <hr>
   </div>
   <br>
@@ -250,29 +243,59 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <h3 class="title is-3">Semantic Generalization</h3>
     </div>
 
+    <br>
+    <h4 class="title is-4">Standard $\pi_0$, training data: BRIDGE</h4>
   <div class="columns is-centered">
   <div class="column">
     <div class="content">
       <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
-        <source src="figs/semantic_generalization_1.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+        <source src="static/videos/pi0/small_give the banana to jensen huang.MOV" type="video/mp4" class="figure-img img-fluid rounded">
       </video>
-      <p><b>Task: Put the M on Mona Lisa; Put the E on Einstein</b></p>
+      <p><b>Task: Give the banana to Jensen Huang (gets stuck)</b></p>
     </div>
   </div>
   <div class="column">
     <div class="content">
       <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
-        <source src="figs/semantic_generalization_2.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+        <source src="static/videos/pi0/small_put green pepper in green drawer.MOV" type="video/mp4" class="figure-img img-fluid rounded">
       </video>
-      <p><b>Task: Put the coke can on Jensen Huang</b></p>
+      <p><b>Task: Put the green pepper in the green drawer (wrong drawer)</b></p>
     </div>
   </div>
   <div class="column">
     <div class="content">
       <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
-        <source src="figs/semantic_generalization_3.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+        <source src="static/videos/pi0/small_Put the healthy food on the plate.MOV" type="video/mp4" class="figure-img img-fluid rounded">
       </video>
-      <p><b>Task: Put the S block on the plate pointed to by the arrow</b></p>
+      <p><b>Task: Put the healthy food on the plate (grabs pizza instead of carrrot)</b></p>
+    </div>
+  </div>
+  </div>
+
+    <h4 class="title is-4">$\pi_0$+PEEK, training data: BRIDGE</h4>
+  <div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/pi0+peek/small_give the banana to jensen huang.MOV" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+      <p><b>Task: Give the banana to Jensen Huang</b></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/pi0+peek/small_put green pepper in green drawer.MOV" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+      <p><b>Task: Put the green pepper in the green drawer</b></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/pi0+peek/small_Put the healthy food on the plate.MOV" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+      <p><b>Task: Put the healthy food on the plate</b></p>
     </div>
   </div>
   </div>
@@ -326,7 +349,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
 
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">Long Horizon, Uninterrupted Task Execution</h3>
+    <h3 class="title is-3">Visual Clutter</h3>
     </div>
 
   <div class="columns is-centered">
