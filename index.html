@@ -218,7 +218,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <img src="./static/images/peek_policy_training.jpg"></a>
     </figure>
     <p> At training time, we use the VLM to predict paths and masks every $H$ steps in closed loop.
-      These paths and masks are drawn onto all images that the policy sees, $o_t^{p,m}$, where it then executes low-level environment actions.
+      These paths and masks are drawn onto all images that the policy sees, $o_t^{p,m}$, where it predicts low-level environment actions.
       At inference time, the VLM is used in the same way, constantly predicting updated paths and masks in closed loop during policy execution.
       This process is compatible with any RGB-input policy! 
     </p>
