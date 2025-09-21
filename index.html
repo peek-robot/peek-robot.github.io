@@ -240,6 +240,35 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
 
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
+    <h3 class="title is-3">Extreme Clutter and Policy Reactivity</h3>
+    </div>
+    <h4 class="title is-4">3DDA+PEEK, training data: Block Stacking in Simulation</h4>
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+            <source src="static/videos/3dda+peek/small_cube_move_clutter_2x_0.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p><b>Task: Put the blue cube on the red cube</b></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+            <source src="static/videos/3dda+peek/small_cube_move_clutter_2x_1.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p><b>Task: Put the blue cube on the red cube</b></p>
+        </div>
+      </div>
+    </div>
+
+
+    <hr>
+    <br>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Semantic Generalization</h3>
     </div>
 
@@ -272,7 +301,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
   </div>
   </div>
 
-    <h4 class="title is-4">$\pi_0$+PEEK, training data: BRIDGE</h4>
+  <h4 class="title is-4">$\pi_0$+PEEK, training data: BRIDGE</h4>
   <div class="columns is-centered">
   <div class="column">
     <div class="content">
@@ -320,51 +349,63 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
   <br>
     </div>
 
-  <!--<div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">Robustness to Clutter</h3>
-    </div>
-    <div class="columns is-centered">
-    
-      <div class="column">
-        <div class="content">
-          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-            <source src="figs/ep_6_pick_up_the_green_pepper_and_put_it_in_the_red_bowl__1_.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-          </video>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="content">
-          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-            <source src="figs/ep_1_pick_up_the_garlic_and_put_it_in_the_pan.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-          </video>
-        </div>
-      </div>
-
-    </div>
-    <hr>
-  <br>
-  </div> -->
 
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Visual Clutter</h3>
     </div>
-
+    <h4 class="title is-4">Vanilla ACT, training data: BRIDGE</h4>
   <div class="columns is-centered">
   <div class="column">
     <div class="content">
       <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
-        <source src="figs/long_horizon_1_small.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+        <source src="static/videos/act/small_push the button.MOV" type="video/mp4" class="figure-img img-fluid rounded">
       </video>
+      <p><b>Task: Push the button (doesn't know what to do)</b></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/act/small_put the carrot in the drawer.MOV" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+      <p><b>Task: Put the carrot in the drawer (goes for drawer)</b></p>
     </div>
   </div>
   <div class="column">
     <div class="content">
       <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
-        <source src="figs/long_horizon_2_small.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+        <source src="static/videos/act/small_slide the pot to the shrimp.MOV" type="video/mp4" class="figure-img img-fluid rounded">
       </video>
+      <p><b>Task: Slide the pot to the shrimp (goes for shrimp)</b></p>
+    </div>
+  </div>
+  </div>
+
+    <h4 class="title is-4">ACT+PEEK, training data: BRIDGE</h4>
+  <div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/act+peek/small_push the button.MOV" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+      <p><b>Task: Push the button</b></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/act+peek/small_put the carrot in the drawer.MOV" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+      <p><b>Task: Put the carrot in the drawer (partial success: missed drop)</b></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/act+peek/small_slide the pot to the shrimp.MOV" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+      <p><b>Task: Slide the pot to the shrimp</b></p>
     </div>
   </div>
   </div>
@@ -383,57 +424,98 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
 
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">Off Domain Data VLM Fine-tuning helps with Path Generation</h3>
+    <h3 class="title is-3">Extreme Object Generalization</h3>
+    </div>
+    <h4 class="title is-4">3DDA+PEEK, training data: Putting cans on pans in Simulation</h4>
+
+      <div class="content">
+        <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+          <source src="static/videos/3dda+peek/small_flamingo_kobe_2x.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+        </video>
+        <p><b>Task: Put the flamingo on Kobe Bryant</b></p>
+
+      <br>
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+            <source src="static/videos/3dda+peek/small_drawer_2x_0.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p><b>Task: Close the drawer</b></p>
+
+          <br>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+            <source src="static/videos/3dda+peek/small_labubu_2x_0.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p><b>Task: Put the Labubu toy on the oreo box</b></p>
+        </div>
+      </div>
+      <div class="column">
+        <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+          <source src="static/videos/3dda+peek/small_spiderman_clutter_2x_0.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+        </video>
+        <p><b>Task: Put the spiderman in the lunch box</b></p>
+          <br>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+            <source src="static/videos/3dda+peek/small_labubu_2x_1_sdr.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p><b>Task: Put the Labubu toy in the shopping bag</b></p>
+        </div>
+        <br>
+      </div>
+    </div>
+
+
+    <hr>
+    <br>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+    <h3 class="title is-3">Ablation Study: Paths vs Masks?</h3>
     <br>
     </div>
   </div>
-    <div class="container is-max-desktop is-centered">
-      <h6 class="title is-6">RLBench Simulation Data helps with path generation of real-world tasks similar to those in the off-domain dataset.</h6>
-      <img src="figs/simulation_helps_hamster.png">
-      </div>
-      <br>
-      <br>
-    <div class="container is-max-desktop is-centered">
-      <h5 class="title is-6">Comparison to RT-Trajectory which uses a pre-trained VLM to generate paths w/o fine-tuning. Fine-tuning on off-domain data to generate paths performs better! </h5>
-        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-          <thead>
-            <tr>
-              <th>Method</th>
-              <th>VLM</th>
-              <th>Finetuning Data</th>
-              <th>Average Human Rank (lower is better)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>RT-Traj. (Gu et al. 2023)</td>
-              <td>0-shot GPT-4o</td>
-              <td>-</td>
-              <td>3.47</td>
-            </tr>
-            <tr>
-              <td>RT-Traj. (Gu et al. 2023)</td>
-              <td>Code as Policies GPT-4o (Liang et al. 2022)</td>
-              <td>-</td>
-              <td>3.41</td>
-            </tr>
-            <tr>
-              <td>HAMSTER (ours)</td>
-              <td>VILA (Lin et al. 2023)</td>
-              <td>Our off-domain data $ \tilde{\mathcal{D}}_\text{off} $ without simulated RLBench</td>
-              <td>2.13</td>
-            </tr>
-            <tr>
-              <td>HAMSTER (ours)</td>
-              <td>VILA (Lin et al. 2023)</td>
-              <td>Our off-domain data $ \tilde{\mathcal{D}}_\text{off} $</td>
-              <td><b>1.40</b></td>
-            </tr>
-          </tbody>
-        </table>
-        
+  <div class="container is-max-desktop is-centered">
+    <h5 class="title is-6">
+      Ablation of path and mask supervision on success rate in simulation.
+    </h5>
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+      <thead>
+        <tr>
+          <th>Paths p</th>
+          <th>Masks m</th>
+          <th>Success (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>✗</td>
+          <td>✗</td>
+          <td>33.5 &plusmn; 3.1</td>
+        </tr>
+        <tr>
+          <td>✓</td>
+          <td>✗</td>
+          <td>52.8 &plusmn; 2.9</td>
+        </tr>
+        <tr>
+          <td>✗</td>
+          <td>✓</td>
+          <td>65.6 &plusmn; 3.1</td>
+        </tr>
+        <tr>
+          <td>✓</td>
+          <td>✓</td>
+          <td><b>73.6 &plusmn; 3.9</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
         <p>
-          Human evaluation shows HAMSTER, with simulation data, excels in capturing spatial and semantic info across tasks, outperforming zero-shot VLM-based trajectory generation (Gu et al., 2023).
+          PEEK benefits from both paths and masks, with the combination of the two achieving the highest success
+          rate on just block stacking, without any generalization challenges, in simulation.
+          We can see in the real-world results that masks become even more important in cluttered real-world scenes.
         </p>
     <br>
   <!--<h5 class="title is-6">Fine-tuning the VLM on paths automatically generated from human hand data.</h5>
@@ -458,358 +540,6 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
   <hr>
     </div>
 
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">3D Aware Tasks</h3>
-    </div>
-    <!--<h5 class="title is-6">HAMSTER's VLM can reason about 3D spatial relationships (top, middle, bottom) just from RGB input:</h5>
-    <img src="figs/3d_reasoning_image.jpg">-->
-
-  <h5 class="title is-6">The 3D low-level policy can reason about various heights depending on the objects, <i>despite being conditioned on identical paths!</i> All 3 videos below are conditioned on the same path despite the objects being different</h5>
-  <div class="columns is-centered">
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=5">
-        <source src="figs/3d_vid_1.mp4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-      <p>The low-level policy successfully puts the grapes into the white bowl.</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=5">
-        <source src="figs/3d_vid_2.mp4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-      <p>The low-level 3D policy reasons about the different height of the milk carton to put it into the white bowl.</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=5">
-        <source src="figs/3d_vid_3.mp4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-      <p>The 3D policy reasons about the different height of the red mug to successfully put the grapes into it.</p>
-    </div>
-  </div>
-</div>
-  <hr>
-  </div>
-  <br>
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">Dexterous and Non-Prehensile</h3>
-    </div>
-
-  <h5 class="title is-6">HAMSTER can perform dexterous and non-prehensile tasks.</i></h5>
-  <div class="columns is-centered">
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
-        <source src="figs/dexterous_1_small.mp4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
-        <source src="figs/dexterous_2.mp4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-  </div>
-  <div class="columns is-centered">
-    <div class="column">
-      <div class="content">
-        <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
-          <source src="figs/dexterous_3.mp4" type="video/mp4" class="figure-img img-fluid rounded">
-        </video>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
-          <source src="figs/dexterous_4.mp4" type="video/mp4" class="figure-img img-fluid rounded">
-        </video>
-      </div>
-    </div>
-  </div>
-  <hr>
-  </div>
-  <br>
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">Retaining Base VLM Capabilities</h3>
-    </div>
-
-    <h5 class="title is-6">Despite fine-tuning HAMSTER still retains base VLM capabilities. For example, HAMSTER's VLM can generalize to new views:</h5>
-
-    <div class="columns is-centered has-text-centered">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" width="70%" onloadstart="this.playbackRate=1">
-        <source src="figs/new_view_generalization_small.mp4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  <hr>
-  </div>
-  <br>
-  <!--<div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">Inference Speed</h3>
-    </div>
-  <hr>
-  </div>
-  <br>-->
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">Comparison against OpenVLA Pre-Trained with Our Sim Data</h3>
-    </div>
-    <h5 class="title is-6">Unlike HAMSTER, OpenVLA does not improve when pre-trained with RLBench simulation data. Hierarchy helps enable cross-domain learning in VLAs!</h5>
-    <div class="columns is-centered">
-      <div class="column">
-        <div class="content has-text-centered">
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
-            <source src="figs/hamster_vs_openvla_sim_data_ours.mp4" type="video/mp4" class="figure-img img-fluid rounded">
-          </video>
-          <b>HAMSTER</b>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content has-text-centered">
-          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
-            <source src="figs/hamster_vs_openvla_sim_data_openvla.mp4" type="video/mp4" class="figure-img img-fluid rounded">
-          </video>
-          <b>OpenVLA w/ RLBench Pre-Training</b>
-        </div>
-      </div>
-    <hr>
-  </div>
-  <hr>
-  </div>
-  <br>
-
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">HAMSTER is Robust to Different Prompts</h3>
-    </div>
-
-    <h5 class="title is-6">Below we demonstrate the HAMSTER's VLM path generation is robust to various input prompts. The first row contains the original prompt HAMSTER was trained with,
-      and second row contains new prompts with changes bolded.
-    </h5>
-
-    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-      <thead>
-        <tr>
-          <th>Prompt</th>
-          <th>Drawn Path</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td width="70%; vertical-align; top"><b>Original Prompt</b>: In the image, please execute the command described in &lt;quest&gt;move the coke to Taylor Swift&lt;/quest&gt;.  
-            Provide a sequence of points denoting the trajectory of a robot gripper to achieve the goal.  
-            Format your answer as a list of tuples enclosed by &lt;ans&gt; and &lt;/ans&gt; tags. For example:  
-            &lt;ans&gt;[(0.25, 0.32), (0.32, 0.17), (0.13, 0.24), &lt;action&gt;Open Gripper&lt;/action&gt;, (0.74, 0.21), &lt;action&gt;Close Gripper&lt;/action&gt;, ...]&lt;/ans&gt;  
-            The tuple denotes point x and y location of the end effector of the gripper in the image. The action tags indicate the gripper action.  
-            The coordinates should be floats ranging between 0 and 1, indicating the relative locations of the points in the image.
-            </td>
-          <td style="width: 30%; text-align: center;">
-            <img src="figs/prompt_robustness_1.png" style="max-width: 100%; height: auto;" alt="Prompt Image">
-          </td>
-        </tr>
-        <!-- <tr>
-          <td>In the image, please execute the command described in &lt;quest&gt;<b>help me to have the coke on the Taylor Swift</b>&lt;/quest&gt;.  
-            Provide a sequence of points denoting the trajectory of a robot gripper to achieve the goal.  
-            Format your answer as a list of tuples enclosed by &lt;ans&gt; and &lt;/ans&gt; tags. For example:  
-            &lt;ans&gt;[(0.25, 0.32), (0.32, 0.17), (0.13, 0.24), &lt;action&gt;Open Gripper&lt;/action&gt;, (0.74, 0.21), &lt;action&gt;Close Gripper&lt;/action&gt;, ...]&lt;/ans&gt;  
-            The tuple denotes point x and y location of the end effector of the gripper in the image. The action tags indicate the gripper action.  
-            The coordinates should be floats ranging between 0 and 1, indicating the relative locations of the points in the image.  
-            </td>
-          <td style="width: 30%; text-align: center;">
-            <img src="figs/prompt_robustness_2.png" style="max-width: 100%; height: auto;" alt="Prompt Image">
-          </td>
-        </tr>
-        <tr>
-          <td>
-            In the <b>provided</b> image, <b>perform the task</b> described in &lt;quest&gt;<b>pick up the coke and place it on the photo of Taylor Swift</b>&lt;/quest&gt;. <b>Generate</b> a sequence of points <b>representing</b> the trajectory of a robot gripper to <b>accomplish</b> the objective.  
-            <b>Present the output</b> as a list of tuples encapsulated within &lt;ans&gt; and &lt;/ans&gt; tags. <b>For instance</b>:  
-            &lt;ans&gt;[(0.25, 0.32), (0.32, 0.17), (0.13, 0.24), &lt;action&gt;Open Gripper&lt;/action&gt;, (0.74, 0.21), &lt;action&gt;Close Gripper&lt;/action&gt;, ...]&lt;/ans&gt;  
-            <b>Each</b> tuple <b>should</b> denote the x and y coordinates of the gripper’s end-effector as floating-point values ranging from 0 to 1, <b>representing</b> relative positions in the image. <b>Actions like opening or closing the gripper should be indicated within &lt;action&gt; tags.</b>
-          </td>
-          <td style="width: 30%; text-align: center;">
-            <img src="figs/prompt_robustness_3.png" style="max-width: 100%; height: auto;" alt="Prompt Image">
-          </td>
-        </tr>
-        <tr>
-          <td>
-            In the <b>provided</b> image, <b>perform the task</b> described in &lt;quest&gt;<b>I want the coke on Taylor Swift</b>&lt;/quest&gt;. <b>Generate</b> a sequence of points <b>representing</b> the trajectory of a robot gripper to <b>accomplish</b> the objective.  
-            <b>Present the output</b> as a list of tuples encapsulated within &lt;ans&gt; and &lt;/ans&gt; tags. <b>For instance:  
-            &lt;ans&gt;[(0.74, 0.21), &lt;action&gt;Close Gripper&lt;/action&gt;, (0.25, 0.32), (0.32, 0.17), (0.13, 0.24), &lt;action&gt;Open Gripper&lt;/action&gt;, ...]</b>&lt;/ans&gt;  
-            <b>Each</b> tuple <b>should</b> denote the x and y coordinates of the gripper’s end-effector as floating-point values ranging from 0 to 1, <b>representing</b> relative positions in the image. <b>Actions like opening or closing the gripper should be indicated within &lt;action&gt; tags.</b>
-          </td>
-          <td style="width: 30%; text-align: center;">
-            <img src="figs/prompt_robustness_4.png" style="max-width: 100%; height: auto;" alt="Prompt Image">
-          </td>
-        </tr> -->
-        <tr>
-          <td>
-            In the <b>provided</b> image, <b>perform the task</b> described in &lt;quest&gt;<b>have the coke on the lady</b>&lt;/quest&gt;. <b>Generate</b> a sequence of points <b>representing</b> the trajectory of a robot gripper to <b>accomplish</b> the objective.  
-            <b>Present the output</b> as a list of tuples encapsulated within &lt;ans&gt; and &lt;/ans&gt; tags. <b>For instance:  
-            &lt;ans&gt;[(0.74, 0.21), &lt;action&gt;Close Gripper&lt;/action&gt;, (0.25, 0.32), (0.32, 0.17), (0.13, 0.24), &lt;action&gt;Open Gripper&lt;/action&gt;, ...]</b>&lt;/ans&gt;  
-          </td>
-          <td style="width: 50%; text-align: center;">
-            <img src="figs/prompt_robustness_5.png" style="max-width: 100%; height: auto;" alt="Prompt Image">
-          </td>
-        </tr>
-
-      </tbody>
-    </table>
-    
-
-
-  <hr>
-  </div>
-  <br>
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">HAMSTER Works with Different Low-Level Policies</h3>
-    </div>
-        <table class="table is-bordered is-narrow is-hoverable is-fullwidth">
-          <thead>
-            <tr>
-              <th>Policy</th>
-              <th>Averaged Success Rate (New Tasks)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>RVT2 (Goyal et al. 2024)</td>
-              <td>22.11</td>
-            </tr>
-            <tr>
-              <td>HAMSTER + RVT2 </td>
-              <td><b>66.56</b></td>
-            </tr>
-            <tr style="border-bottom:3px solid black">
-            </tr>
-            <tr>
-              <td>3D-DA (Ke et al. 2024)</td>
-              <td>16.70</td>
-            </tr>
-            <tr>
-              <td>HAMSTER + 3D-DA</td>
-              <td><b>72.55</b></td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <p>
-          HAMSTER performs well with different low-level policies (RVT2, 3D-DA), and demonstrates a significant performance improvement compared to the base policy with both.
-         </p>
-
-  <hr>
-  </div>
-  <br>
-<!--<div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <h3 class="title is-3">Additional Experiment Videos</h3>
-    </div>
-<div class="columns is-centered">
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_0_have_the_r_in_the_left_cup.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_0_pick_up_the_left_object_and_put_it_in_the_left_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-</div>
-<div class="columns is-centered">
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_0_pick_up_the_r_and_put_it_in_the_red_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_0_push_down_the_drink.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-</div>
-<div class="columns is-centered">
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_1_pick_up_the_middle_object_and_put_it_in_the_left_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_5_pick_up_the_right_object_and_put_it_in_the_right_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-</div>
-<div class="columns is-centered">
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_1_push_down_the_object_on_the_left.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_1_the_goal_is_to_have_the_e_in_the_right_cup.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-</div>
-<div class="columns is-centered">
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_3_press_the_right_red_button.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_4_i_want_the_yellow_button_being_pressed.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-</div>
-<div class="columns is-centered">
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_4_pick_up_the_middle_object_and_put_it_in_the_right_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_4_pick_up_the_mouse_and_put_it_in_the_white_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-</div>
-  </div>-->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
