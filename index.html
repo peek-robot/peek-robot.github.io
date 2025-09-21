@@ -171,11 +171,15 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
         <h2 class="title is-3">Summary</h2>
 	<p>
 	    <figure>
-	    <img src="./figs/hamster_teaser_fig.jpg">
+	    <img src="./static/images/peek_teaser.jpg" style="width: 75%; height: auto;">
 	    </figure>
         <div class="content has-text-justified">
-	  We propose a Hierarchical VLA architecture, <b>HAMSTER</b>, which can enable robotic manipulation with <b>semantic, visual, and geometric generalization</b> after being trained on easy to collect, <b>off-domain data</b>.
-    This allows us to combine the benefits of imitation learning models, which require little in-domain robot data, with those of large VLA models that can generalize well.
+          <br>
+	  <b>PEEK</b> enhances the zero-shot generalization ability of any RGB-input manipulation policy by showing policies
+    <i>where to focus on</i> and <i>what to do</i>. This guidance is 
+    given to the policy via a VLM that predicts <i>paths</i> and <i>masking points</i> to 
+    draw onto the policy's input images in closed-loop.
+    This allows policies to focus on just <i>how</i> to execute low-level actions.
 	  <br>
 
 
@@ -190,26 +194,33 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <!--/ Abstract. -->
   </div>
   <div class="content has-text-justified">
-    <h4 class="title is-5">1. VLM and Policy Training </h4>
+    <h4 class="title is-5">1. VLM Fine-tuning and Data Preparation</h4>
+    <b>Overview:</b>
+    <p>
+      To help generalization of the policy, the VLM itself needs to be able to generalize well to new tasks.
+      We fine-tune a pre-trained VLM on a large, automatically labeled robotics dataset to produce <i>paths</i> and <i>masking points</i>.
+      Paths help the policy understand <i>what</i> to do, and masking points help the policy understand <i>where</i> to focus on.
+    </p>
+    <b>Data Labeling Pipeline:</b>
     <figure>
-    <img src="./figs/hamster_training_fig.png">
+    <img src="./static/images/peek_data_labeling.jpg">
     </figure>
     <p>
-      <b>(a): </b>First, we fine-tune a pre-trained VLM on a large, general, off-domain dataset $ \tilde{\mathcal{D}}_\text{off} $ to produce <i>paths</i> and <i>points</i>.
-      This includes robot simulation data and robot teleoperation data from environments different from the target environment.
-
-      <br>
-      <b>(b): </b>Then, we train a data-efficient, 3D-input policy on a small, in-domain dataset $ \mathcal{D}_\text{path} $ to produce actions <i>conditioned on path-drawn images</i>.
-      These path-drawn images help the policy generalize to new semantic, visual, and geometric task variations!
+    The data labeling pipeline: (1) Detect task-relevant moving points, (2) mask irrelevant areas and extract gripper paths, (3) segment trajectories, and (4) generate gripper paths and masking points for each segment.
+    This scalable labeling pipeline allows to label 20 robotics datasets from Open-X!
     </p> 
-  <h4 class="title is-5">2. Inference </h4>
+    <b>VLM Fine-tuning:</b>
+    <p>
+      We fine-tune a VILA-1.5-3b on the automatically labeled data to produce <i>paths</i> and <i>masking points</i> conditioned on robot image observations and task instructions.
+    </p>
+  <h4 class="title is-5">2. Policy Training and Inference</h4>
     <figure>
-    <img src="./figs/hamster_inference_fig.jpg"></a>
+    <img src="./static/images/peek_policy_training.jpg"></a>
     </figure>
-    <p> At inference time, we use the VLM to predict paths for the first observation $o_1$ conditioned on the text instruction. 
-      These paths are drawn onto all images that the policy sees, $\tilde{o}_t$, where it then executes low-level environment actions.
-      <br>
-      <b>Visual generalization comes from the fine-tuned VLM; expert low-level control comes from the separate low-level 3D policy.</b>
+    <p> At training time, we use the VLM to predict paths and masks every $H$ steps in closed loop.
+      These paths and masks are drawn onto all images that the policy sees, $o_t^{p,m}$, where it then executes low-level environment actions.
+      At inference time, the VLM is used in the same way, constantly predicting updated paths and masks in closed loop during policy execution.
+      This process is compatible with any RGB-input policy! 
     </p>
   <hr>
   </div>
@@ -223,12 +234,12 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <h2 class="title is-2">Experiments and Results</h2>
     </div>
     <div class="content has-text-centered">
-      <img src="figs/overall_results.png">
+      <img src="static/images/peek_results.jpg">
       <br>
-      <h6 class="title is-6">
-        Overall results: HAMSTER outperforms OpenVLA and 3D imitation learning (RVT2, 3DDA) policies in generalization to new task variations.
+      <b>
+        PEEK improves performance of 2D (ACT, $\pi_0$) and 3D imitation learning (3DDA) policies in generalization to new task variations.
       We separate results into a variety of sections demonstrating various capabilities of HAMSTER below:
-      </h6>
+      </b>
     </div>
     <hr>
   </div>
